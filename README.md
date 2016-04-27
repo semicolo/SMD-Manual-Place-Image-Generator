@@ -9,7 +9,7 @@ This script automatically generates the images using an image of the board and a
 ### Here's how to use it with a board designed in Cadsoft Eagle:
 - Export an image of the board
   - Ensure the lower left corner of your board has 0,0 coordinates, else move it
-  - Select the layers you want to show (I use 17, 18, 20, 21, 25, 31, no grid)
+  - Select the layers you want to show (I use 17, 18, 20, 21, 25, 31, no grid), make sure component orientation is showing.
   - Export the image (The script assumes 300ppp this can be changed in the first lines of the script)
   - Crop the image to the board dimensions if needed (Eagle tends to add space around the board, get rid of that or the placement will be off)
 - Export the components positions
