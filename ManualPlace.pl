@@ -57,6 +57,7 @@ $baseImage->Read($ARGV[1]);
 my $height = $baseImage->GetAttribute('height');
 
 my $index = 0;
+my $indexstring = "";
 
 # remaining lines
 my @remaining;
@@ -105,7 +106,8 @@ foreach my $row (@kept) {
 }
 $image->Splice(height=>50, width=>0);
 $image->Annotate(pointsize=>32, text=>" ${value} x$quantity,$name", x=>0, y=>34, stretch=>'Condensed');
-$image->Write(filename=>"Assembly/Image${index}.png");
+$indexstring = sprintf("%03d", $index);
+$image->Write(filename=>"Assembly/Image${indexstring}.png");
 $index += 1;
 
 @lines = (); # copy the remaining data back into the lines array
